@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "r4c"
+version = "0.1.0"
+description = ""
+authors = ["RG1ee <niwows@yandex.ru>"]
+readme = "README.md"
+packages = [
+  {include = "src"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "3.0"
+python-dotenv = "^1.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.291"
+pre-commit = "^3.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+core = "src.manage:main"
+
+[tool.ruff]
+ignore = ["F401", "F403", "F405"]
+exclude = [
+    "migrations",
+    ".direnv",
+    ".git",
+    ".mypy_cache",
+    ".ruff_cache",
+    ".tox",
+    ".venv",
+    "venv",
+    "__pypackages__",
+    "dist",
+    "node_modules",
+]
+line-length = 120
