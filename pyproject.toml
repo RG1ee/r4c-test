@@ -17,6 +17,7 @@ python-dotenv = "^1.0.0"
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.0.291"
 pre-commit = "^3.4.0"
+django-stubs = "^4.2.4"
 
 [build-system]
 requires = ["poetry-core"]
